@@ -1,4 +1,6 @@
 import React from "react";
+import CategoryBar from './CategoryBar';
+
 
 function PropertyListingForm() {
 
@@ -38,18 +40,13 @@ function PropertyListingForm() {
           type="text"
           name="price"
           placeholder="Price $..."
-          className="input-text"
+          className="input-num"
         />
 
         <br></br>
         <br></br>
-
-
         <h3> Categories </h3>
-        {/* Category buttons */}
-        <br></br>
-        <br></br>
-
+        <CategoryBar />
         <br></br>
         <br></br>
 
@@ -59,7 +56,7 @@ function PropertyListingForm() {
           type="text"
           name="price"
           placeholder="# of Bedrooms..."
-          className="input-text"
+          className="input-num"
         />
         <br></br>
 
@@ -68,7 +65,7 @@ function PropertyListingForm() {
           type="text"
           name="price"
           placeholder="# of Bathrooms..."
-          className="input-text"
+          className="input-num"
         />
         <br></br>
         <br></br>
