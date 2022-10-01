@@ -1,8 +1,16 @@
 import './App.css';
-import React from "react";
+import React, { useState } from "react";
+
+import PropertyListingForm from "./PropertyListingForm";
 
 
 function App() {
+
+  const [showForm, setShowForm] = useState(false);
+
+  function handleClick() {
+    setShowForm((showForm) => !showForm);
+  }
 
 
   return (
@@ -24,7 +32,7 @@ function App() {
             </div>
             <div className="buttonContainer">
               
-           <button>Add New Property</button>
+            {showForm ?<button onClick={handleClick}>Close <br></br> ❌ </button> : <button onClick={handleClick}>Add New Property</button>}
 
             </div>
           </div>
@@ -36,13 +44,13 @@ function App() {
                   <nav id="sidebar-menu"></nav>
                 </button>
             </div>
-
-          
             
           </div>
  
         </div>
-        {/* chagne hr css */}
+
+        {showForm ? <PropertyListingForm /> : null}
+
         <hr className="hr"></hr>
 
         <br></br>
@@ -54,7 +62,7 @@ function App() {
         {/* ThreeDHouse */}
         {/* SearchBarButton */}
         {/* CreateListingButton */}
-        {/* FakeIcon/Burger */}
+        {/* Menu */}
       {/* 2 PropertyListingForm */}
       {/* 3 SortFilterContainer */}
         {/* HousingCategoryBar  */}
