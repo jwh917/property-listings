@@ -14,6 +14,45 @@ function App() {
 
       {/* filter button remains at the bottom of the page as you scroll thru properties  */}
 
+      <div className="filterGrid">
+        <button className="filterButton">Filter</button>
+      </div>
+
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+
+
+
 
      {/* 1 HeaderBar */}
         {/* ThreeDHouse  */}

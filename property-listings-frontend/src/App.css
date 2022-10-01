@@ -2,11 +2,9 @@ body {
   font-family: Algerian;
 }
 .headerBar{
-  /* position: relative;  */
   top: 10px;
   margin: auto;
   width: 100%;
-  /* left: 30px; */
 }
 
 .headerBarGrid{
@@ -27,7 +25,8 @@ body {
   background-color: white;
   color:black;
   font-family: Algerian;
-  
+  margin-right: -15px;
+
 }
 
 .input-search:hover {
@@ -59,6 +58,8 @@ button {
 .buttonContainer {
   text-align: center;
   padding: 1rem;
+  margin-right: -10px;
+
 }
 
 button:hover {
@@ -152,6 +153,8 @@ hr{
   margin: auto;
   width: 100%;
   left: 30px;
+  margin-left: -20px;
+
 }
 
 .categoryBarGrid{
@@ -159,7 +162,6 @@ hr{
   justify-content: space-evenly;
   text-align: center;
   padding: 10px;
-  /* font-size: 10px; */
 }
 
 .categoryBarImg{
@@ -168,11 +170,21 @@ hr{
 }
 
 
+.filterGrid{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+}
 
-/* .categoryBarGrid .buttons .imgs{
-  width: 10px;
-  height: 10px;
-} */
+
+.filterButton {
+  border-radius: 70px;
+  text-align: center;
+  margin-left: 25px;
+  position: fixed;
+  bottom: 10px;
+}
 
 
 
