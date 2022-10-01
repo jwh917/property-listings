@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import HouseIcon from './HouseIcon';
+import TitleSearchAddBtn from './TitleSearchAddBtn';
 
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
@@ -19,18 +20,7 @@ function HeaderBar() {
 
         <HouseIcon />
 
-        {/* TitleSearchAddBtn*/}
-        <div>
-          <h1>Property Listing 🏘</h1>
-          <div className="search-box">
-            <input type="text" className="input-search" placeholder="🔎"></input>
-          </div>
-          <div className="buttonContainer">
-            
-            {showForm ?<button onClick={handleClick}>Close <br></br> ❌ </button> : <button onClick={handleClick}>Add New Property <br></br> 🏡 </button>}
-
-          </div>
-        </div>
+        <TitleSearchAddBtn showForm={showForm} handleClick={handleClick}/>
         
         {/* MenuIcon */}
         <div>
