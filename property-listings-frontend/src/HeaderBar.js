@@ -26,7 +26,7 @@ function HeaderBar() {
           </div>
           <div className="buttonContainer">
             
-            {showForm ?<button onClick={handleClick}>Close <br></br> ❌ </button> : <button onClick={handleClick}>Add New Property</button>}
+            {showForm ?<button onClick={handleClick}>Close <br></br> ❌ </button> : <button onClick={handleClick}>Add New Property <br></br> 🏡 </button>}
 
           </div>
         </div>

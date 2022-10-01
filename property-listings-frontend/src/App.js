@@ -2,6 +2,7 @@ import './App.css';
 import React from "react";
 
 import HeaderBar from './HeaderBar';
+import FilterButton from './FilterButton';
 
 
 function App() {
@@ -11,12 +12,7 @@ function App() {
 
       <HeaderBar />
 
-
-      {/* filter button remains at the bottom of the page as you scroll thru properties  */}
-
-      <div className="filterGrid">
-        <button className="filterButton">Filter</button>
-      </div>
+      <FilterButton />
 
       <br></br>
       <br></br>
