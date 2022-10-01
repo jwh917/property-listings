@@ -5,11 +5,11 @@ function PropertyListingForm() {
   return (
     <div className="newPropertyFormContainer">
       <form className="newPropertyForm" >
-        <h3>Create a New Property!</h3>
+        <h2>Create New Property!</h2>
         <input
           type="text"
           name="name"
-          placeholder="Name..."
+          placeholder="Property Name..."
           className="input-text"
         />
 
@@ -27,14 +27,14 @@ function PropertyListingForm() {
         <input
           type="text"
           name="images"
-          placeholder="Image URLs..."
+          placeholder="Image Url..."
           className="input-text"
         />
 
         <br></br>
 
         <input
-        // number
+        // number *make input smaller
           type="text"
           name="price"
           placeholder="Price $..."
@@ -45,18 +45,17 @@ function PropertyListingForm() {
         <br></br>
 
 
-        <button> Categories </button>
+        <h3> Categories </h3>
+        {/* Category buttons */}
         <br></br>
         <br></br>
 
-
-        <button> Types </button>
         <br></br>
         <br></br>
 
 
         <input
-        // number
+        // number *make input smaller
           type="text"
           name="price"
           placeholder="# of Bedrooms..."
@@ -65,7 +64,7 @@ function PropertyListingForm() {
         <br></br>
 
         <input
-        // number
+        // number *make input smaller
           type="text"
           name="price"
           placeholder="# of Bathrooms..."
