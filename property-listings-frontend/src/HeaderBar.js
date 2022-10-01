@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import HouseIcon from './HouseIcon';
 import TitleSearchAddBtn from './TitleSearchAddBtn';
+import MenuIcon from './MenuIcon';
 
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
@@ -22,16 +23,7 @@ function HeaderBar() {
 
         <TitleSearchAddBtn showForm={showForm} handleClick={handleClick}/>
         
-        {/* MenuIcon */}
-        <div>
-
-          <div style={{"border": "1px solid black"}}>  
-              <button id="hamburger-menu">
-                <nav id="sidebar-menu"></nav>
-              </button>
-          </div>
-          
-        </div>
+        <MenuIcon />
 
       </div>
 
