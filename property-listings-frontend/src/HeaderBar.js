@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import HouseIcon from './HouseIcon';
+
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
 
@@ -14,12 +16,8 @@ function HeaderBar() {
   return (
     <div className="headerBar">
       <div className="headerBarGrid">
-        
-        {/* HouseIcon */}
-        {/* Add Contact Info */}
-        <div style={{"marginTop" : "-85px"}} >
-          <h2 style={{"fontSize" : "100px", "border": "1px solid black"}}>🏘</h2>
-        </div>
+
+        <HouseIcon />
 
         {/* TitleSearchAddBtn*/}
         <div>

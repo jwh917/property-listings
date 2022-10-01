@@ -19,7 +19,7 @@ function App() {
 
 
           <div> 
-            <img style={{"width" : "250px", "height" : "250px"}} src="https://a0.muscache.com/im/pictures/1665b898-8cff-4bdf-aba1-c94210351352.jpg?im_w=960" alt="cabin_pic" />
+            <img style={{"width" : "250px", "height" : "250px", "border": "3px solid black", "border-radius" : "10px"}} src="https://a0.muscache.com/im/pictures/1665b898-8cff-4bdf-aba1-c94210351352.jpg?im_w=960" alt="cabin_pic" />
 
             <h3>Morris Cabin</h3>
             <h5>Albany, NY</h5>
@@ -34,7 +34,7 @@ function App() {
 
 
           <div>
-            <img style={{"width" : "250px", "height" : "250px"}} src="https://a0.muscache.com/im/pictures/4de4712a-f9a8-4883-ba40-718155ed37eb.jpg?im_w=960" alt="pool_pic" />
+            <img style={{"width" : "250px", "height" : "250px", "border": "3px solid black", "border-radius" : "10px"}} src="https://a0.muscache.com/im/pictures/4de4712a-f9a8-4883-ba40-718155ed37eb.jpg?im_w=960" alt="pool_pic" />
 
             <h3>Luci's Villa</h3>
             <h5>Port Jeff, CA</h5>
@@ -49,7 +49,7 @@ function App() {
           </div>
 
           <div>
-            <img style={{"width" : "250px", "height" : "250px"}} src="https://a0.muscache.com/im/pictures/miso/Hosting-21409981/original/a8fa243d-dac8-4238-93e5-f7aa33072ff8.jpeg?im_w=960" alt="house_pic" />
+            <img style={{"width" : "250px", "height" : "250px", "border": "3px solid black", "border-radius" : "10px"}} src="https://a0.muscache.com/im/pictures/miso/Hosting-21409981/original/a8fa243d-dac8-4238-93e5-f7aa33072ff8.jpeg?im_w=960" alt="house_pic" />
 
             <h3>Wonder In The Woods</h3>
             <h5>Pinchot, WA</h5>
@@ -64,7 +64,7 @@ function App() {
           </div>
 
           <div>
-            <img style={{"width" : "250px", "height" : "250px"}} src="https://a0.muscache.com/im/pictures/miso/Hosting-49629092/original/affba2c4-fcf0-4c42-a01e-012a936ccb1d.jpeg?im_w=960" alt="beach_pic" />
+            <img style={{"width" : "250px", "height" : "250px", "border": "3px solid black", "border-radius" : "10px"}} src="https://a0.muscache.com/im/pictures/miso/Hosting-49629092/original/affba2c4-fcf0-4c42-a01e-012a936ccb1d.jpeg?im_w=960" alt="beach_pic" />
 
             <h3>Rocko's Point</h3>
             <h5>Miami, FL</h5>
