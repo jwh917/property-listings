@@ -1,15 +1,15 @@
 body {
   font-family: Algerian;
 }
-.HeaderBar{
-  position: relative; 
+.headerBar{
+  /* position: relative;  */
   top: 10px;
   margin: auto;
   width: 100%;
-  left: 30px;
+  /* left: 30px; */
 }
 
-.HeaderBarGrid{
+.headerBarGrid{
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -26,7 +26,6 @@ body {
   border-radius: 40px;
   background-color: white;
   color:black;
-  
   font-family: Algerian;
   
 }
@@ -145,6 +144,35 @@ hr{
   border: #e04b52 solid 1px;
   color: #e04b52;
 }
+
+
+.categoryBar{
+  position: relative; 
+  top: 10px;
+  margin: auto;
+  width: 100%;
+  left: 30px;
+}
+
+.categoryBarGrid{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+  /* font-size: 10px; */
+}
+
+.categoryBarImg{
+  width: 20px;
+  height: 20px;
+}
+
+
+
+/* .categoryBarGrid .buttons .imgs{
+  width: 10px;
+  height: 10px;
+} */
 
 
 

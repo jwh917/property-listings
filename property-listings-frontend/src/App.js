@@ -18,8 +18,8 @@ function App() {
 
  
 
-      <div className="HeaderBar">
-        <div className="HeaderBarGrid">
+      <div className="headerBar">
+        <div className="headerBarGrid">
           
           <div style={{"marginTop" : "-95px"}} >
             <h2 style={{"fontSize" : "100px", "border": "1px solid black"}}>🏘</h2>
@@ -27,8 +27,8 @@ function App() {
 
           <div>
             <h1>Property Listing 🏘</h1>
-            <div class="search-box">
-              <input type="text" class="input-search" placeholder="🔎"></input>
+            <div className="search-box">
+              <input type="text" className="input-search" placeholder="🔎"></input>
             </div>
             <div className="buttonContainer">
               
@@ -50,6 +50,18 @@ function App() {
         </div>
 
         {showForm ? <PropertyListingForm /> : null}
+
+
+        <div className="categoryBar">
+          <div className="categoryBarGrid">
+            <button> <img className="categoryBarImg" src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="House" /> <br></br> House</button>
+            <button> <img className="categoryBarImg" src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt="Beach/Tropical" /> <br></br> Beach/Tropical</button>
+            <button> <img className="categoryBarImg" src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="Cabin" /> <br></br> Cabin</button>
+            <button> <img className="categoryBarImg" src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="Best Pools" /> <br></br> Best Pools</button>
+          </div>
+        </div>
+
+     
 
         <hr className="hr"></hr>
 
