@@ -46,6 +46,7 @@ function PropertyListingForm() {
         <br></br>
         <br></br>
         <h3> Categories </h3>
+        {/* Make seperate btns for form - FormButtons */}
         <CategoryBar />
         <br></br>
         <br></br>

@@ -23,7 +23,7 @@ function App() {
 
             <h3>Morris Cabin</h3>
             <h5>Albany, NY</h5>
-            <h4>$275/night</h4>
+            <h4>$478,094</h4>
 
             <img className="categoryBarImg" src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="Cabin" />
 
@@ -38,7 +38,7 @@ function App() {
 
             <h3>Luci's Villa</h3>
             <h5>Port Jeff, CA</h5>
-            <h4>$700/night</h4>
+            <h4>$1,030,256</h4>
 
             <img className="categoryBarImg" src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="Best Pools" />
 
@@ -53,7 +53,7 @@ function App() {
 
             <h3>Wonder In The Woods</h3>
             <h5>Pinchot, WA</h5>
-            <h4>$350/night</h4>
+            <h4>$530,000</h4>
 
             <img className="categoryBarImg" src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="House" />
 
@@ -68,7 +68,7 @@ function App() {
 
             <h3>Rocko's Point</h3>
             <h5>Miami, FL</h5>
-            <h4>$500/night</h4>
+            <h4>$740,639</h4>
 
             <img className="categoryBarImg" src="https://a0.muscache.com/pictures/10ce1091-c854-40f3-a2fb-defc2995bcaf.jpg" alt="Beach/Tropical" />
 

@@ -15,10 +15,13 @@ function HeaderBar() {
     <div className="headerBar">
       <div className="headerBarGrid">
         
+        {/* HouseIcon */}
+        {/* Add Contact Info */}
         <div style={{"marginTop" : "-85px"}} >
           <h2 style={{"fontSize" : "100px", "border": "1px solid black"}}>🏘</h2>
         </div>
 
+        {/* TitleSearchAddBtn*/}
         <div>
           <h1>Property Listing 🏘</h1>
           <div className="search-box">
@@ -30,7 +33,8 @@ function HeaderBar() {
 
           </div>
         </div>
-
+        
+        {/* MenuIcon */}
         <div>
 
           <div style={{"border": "1px solid black"}}>  
