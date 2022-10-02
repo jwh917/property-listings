@@ -1,5 +1,5 @@
 import React from "react";
-import CategoryBar from './CategoryBar';
+import FormCategoryBar from './FormCategoryBar';
 
 
 function PropertyListingForm() {
@@ -46,8 +46,7 @@ function PropertyListingForm() {
         <br></br>
         <br></br>
         <h3> Categories </h3>
-        {/* Make seperate btns for form - FormButtons */}
-        <CategoryBar />
+        <FormCategoryBar />
         <br></br>
         <br></br>
 

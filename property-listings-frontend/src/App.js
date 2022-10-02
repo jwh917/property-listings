@@ -7,8 +7,6 @@ import PropertyListing from './PropertyListing';
 import PropertyListingContainer from './PropertyListingContainer';
 
 
-
-
 function App() {
   const [properties, setProperties] = useState([])
 
@@ -48,16 +46,6 @@ function App() {
       <br></br>
       <br></br>
       <br></br>
- 
-     {/* 1 HeaderBar */}
-        {/* ThreeDHouse  */}
-        {/* SearchBarButton */}
-        {/* CreateListingButton */}
-        {/* Menu */}
-      {/* 2 PropertyListingForm */}
-      {/* 3 CategoryBar  */}
-      {/* 4 FilterButton */}
-      {/* 5 ListingsContainer */}
 
     </div>
   );
