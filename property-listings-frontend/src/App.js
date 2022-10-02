@@ -4,6 +4,9 @@ import React, { useState, useEffect } from "react";
 import HeaderBar from './HeaderBar';
 import FilterButton from './FilterButton';
 import PropertyListing from './PropertyListing';
+import PropertyListingContainer from './PropertyListingContainer';
+
+
 
 
 function App() {
@@ -33,17 +36,7 @@ function App() {
 
       <HeaderBar />
 
-      <div className="propertyListingContainer">
-        <div className="propertyListingGrid">
-
-          {allProperties}
-
-        </div>
-      </div>
-
-      
-
-
+      <PropertyListingContainer allProperties={allProperties}/>
 
       <FilterButton />
 
