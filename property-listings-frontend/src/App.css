@@ -1,6 +1,7 @@
 body {
   font-family: Algerian;
 }
+
 .headerBar{
   top: 10px;
   margin: auto;
@@ -194,6 +195,20 @@ hr{
   margin-left: 25px;
   position: fixed;
   bottom: 10px;
+}
+
+
+.propertyListingContainer{
+  top: 10px;
+  margin: auto;
+  width: 100%;
+}
+
+.propertyListingGrid{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 10px;
 }
 
 
