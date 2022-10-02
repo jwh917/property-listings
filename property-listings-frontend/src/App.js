@@ -9,6 +9,11 @@ import PropertyListingContainer from './PropertyListingContainer';
 
 function App() {
   const [properties, setProperties] = useState([])
+  const [searchInput, setSearchInput] = useState("")
+
+  function propertySearch(event){
+    setSearchInput(event.target.value)
+  }
 
   useEffect(() => {
     fetch("http://localhost:3000/properties")
@@ -19,7 +24,12 @@ function App() {
 
   }, []);
 
-  const allProperties = properties.map((property) => {
+
+  const searchedProperties = properties.filter((property) => 
+  (property.name.toLowerCase()).includes(searchInput.toLowerCase()))
+
+
+  const allProperties = searchedProperties.map((property) => {
     return(
       <PropertyListing
       key={property.name}
@@ -32,7 +42,7 @@ function App() {
   return (
     <div className="App">
 
-      <HeaderBar />
+      <HeaderBar propertySearch={propertySearch}/>
 
       <PropertyListingContainer allProperties={allProperties}/>
 

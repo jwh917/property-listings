@@ -7,13 +7,16 @@ import MenuIcon from './MenuIcon';
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
 
-function HeaderBar() {
+function HeaderBar({propertySearch}) {
 
   const [showForm, setShowForm] = useState(false);
+
 
   function handleClick() {
     setShowForm((showForm) => !showForm);
   }
+
+
 
   return (
     <div className="headerBar">
@@ -21,7 +24,7 @@ function HeaderBar() {
 
         <HouseIcon />
 
-        <TitleSearchAddBtn showForm={showForm} handleClick={handleClick}/>
+        <TitleSearchAddBtn showForm={showForm} handleClick={handleClick} propertySearch={propertySearch}/>
         
         <MenuIcon />
 
