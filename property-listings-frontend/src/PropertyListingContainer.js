@@ -1,12 +1,12 @@
 import React from "react";
 
-function PropertyListingContainer({allProperties}) {
+function PropertyListingContainer({displayItems}) {
 
   return (
     <div className="propertyListingContainer">
       <div className="propertyListingGrid">
 
-        {allProperties}
+        {displayItems()}
 
       </div>
    </div>

@@ -2,20 +2,19 @@ import React from "react";
 
 function PropertyListing({property}) {
 
-
   const {itemUrl, name, location, price, category, bedrooms, bathrooms} = property
 
   function propertyIcon(category){
-    if (category === "house"){
+    if (category === "House"){
       return <img className="categoryBarImg" src="https://a0.muscache.com/pictures/677a041d-7264-4c45-bb72-52bff21eb6e8.jpg" alt="House" />
     }
-    if (category === "cabin"){
+    if (category === "Cabin"){
       return <img className="categoryBarImg" src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt="Cabin" />
     }
-    if (category === "beachTrop"){
+    if (category === "Beach/Tropical"){
       return <img className="categoryBarImg" src="https://a0.muscache.com/pictures/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt="Beach/Tropical" />
     }
-    if (category === "bestPool"){
+    if (category === "Best Pools"){
       return <img className="categoryBarImg" src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="Best Pools" />
     }
 

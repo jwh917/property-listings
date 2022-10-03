@@ -175,6 +175,14 @@ hr{
   padding: 10px;
 }
 
+
+
+.activeCategoryBarBtn {
+  background-color: #699;
+  color: white;
+}
+
+
 .categoryBarImg{
   width: 20px;
   height: 20px;
