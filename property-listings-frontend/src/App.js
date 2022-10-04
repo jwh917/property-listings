@@ -11,18 +11,36 @@ function App() {
   const [properties, setProperties] = useState([])
 
   const [category, setCategory] = useState("All");
-  // const [catorgey, setCatorgey] = useState("All");
-  // category
-  // console.log(catorgey)
 
   const [searchInput, setSearchInput] = useState("")
+
+  const [sortHighLow, setSortHighLow] = useState(false)
+  const [sortLowHigh, setSortLowHigh] = useState(false)
+
+  function sortHandleHighLow(){
+    setSortHighLow((prevState) => !prevState)
+    setSortLowHigh(false)
+  }
+
+  function sortHandleLowHigh(){
+    setSortLowHigh((prevState) => !prevState) 
+    setSortHighLow(false)
+  }
+
+  function helpSort(sortLowHigh, sortHighLow, property1, property2){
+    if(sortLowHigh === true){
+      return property1.price - property2.price
+    }
+    if((sortHighLow === true)){
+      return property2.price - property1.price
+    }
+  }
 
   const prevCategoryRef = useRef();
 
   useEffect(() => {
     prevCategoryRef.current = category;    
   }, [category]);
-
 
 
   function handleCategoryChange(selectCategory){
@@ -62,7 +80,7 @@ function App() {
 
   // maybe by location too
   const searchedProperties = properties.filter((property) => 
-  (property.name.toLowerCase()).includes(searchInput.toLowerCase()))
+  (property.name.toLowerCase()).includes(searchInput.toLowerCase())).sort((property1, property2) => helpSort(sortLowHigh, sortHighLow, property1, property2))
 
 
   const houses = searchedProperties.filter(property => property.category === "House");
@@ -126,7 +144,6 @@ function App() {
     }
 
     if(category === " House"){
-      // console.log("Houses")
       return showHouses
     }
 
@@ -144,6 +161,8 @@ function App() {
 
   }
 
+
+
   return (
     <div className="App">
 
@@ -151,8 +170,15 @@ function App() {
 
       <PropertyListingContainer displayItems={displayItems}/>
 
-      <FilterButton />
+      <FilterButton sortHighLow={sortHighLow} sortLowHigh={sortLowHigh} sortHandleHighLow={sortHandleHighLow} sortHandleLowHigh={sortHandleLowHigh}/>
 
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>

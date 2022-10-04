@@ -189,20 +189,19 @@ hr{
 }
 
 
-.filterGrid{
-  display: flex;
-  justify-content: space-evenly;
-  text-align: center;
-  padding: 10px;
+.priceBtns{
+  position: fixed;
+  border-radius: 70px;
+  margin-left: 700px;
+  position: inline-block;
+  bottom: 10px;
 }
 
-
 .filterButton {
-  border-radius: 70px;
-  text-align: center;
-  margin-left: 25px;
-  position: fixed;
-  bottom: 10px;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  position: inline-block;
 }
 
 
@@ -211,7 +210,6 @@ hr{
   margin: auto;
   width: 100%;
   margin-left: -15px;
-
 }
 
 .propertyListingGrid{
@@ -219,6 +217,10 @@ hr{
   justify-content: space-between;
   text-align: center;
   padding: 10px;
+}
+
+#activeButton{
+  color: blue;
 }
 
 

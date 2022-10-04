@@ -1,19 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 
-function FilterButton() {
+function FilterButton({sortHighLow, sortLowHigh, sortHandleHighLow, sortHandleLowHigh}) {
 
-  const [changeBtn, setChangeBtn] = useState(false);
-
-  function handleFilterBtn() {
-    setChangeBtn((changeBtn) => !changeBtn);
-  }
 
   return (
-    <div className="filterGrid">
 
-      {changeBtn ? <button onClick={handleFilterBtn} className="filterButton">Filter Price ⬆️</button> : <button onClick={handleFilterBtn} className="filterButton">Filter Price ⬇️</button>}
+    <div className="priceBtns">
+
+      {sortHighLow ? 
+      (<button onClick={sortHandleHighLow} id="activeButton" className="filterButton">Price ⬆️</button>) 
+      : 
+      (<button onClick={sortHandleHighLow} className="filterButton">Price ⬆️</button>)
+      }
+
+      <br></br>
+      <br></br>
+
+      {sortLowHigh ?
+      (<button onClick={sortHandleLowHigh} id="activeButton" className="filterButton">Price ⬇️</button>) 
+      : 
+      (<button onClick={sortHandleLowHigh} className="filterButton">Price ⬇️</button>)
+      }
 
     </div>
+
   );
 }
 
