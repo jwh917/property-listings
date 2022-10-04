@@ -10,31 +10,33 @@ import PropertyListingContainer from './PropertyListingContainer';
 function App() {
   const [properties, setProperties] = useState([])
 
-  const [catorgey, setCatorgey] = useState("All");
+  const [category, setCategory] = useState("All");
+  // const [catorgey, setCatorgey] = useState("All");
+  // category
   // console.log(catorgey)
 
   const [searchInput, setSearchInput] = useState("")
 
-  const prevCatorgeyRef = useRef();
+  const prevCategoryRef = useRef();
 
   useEffect(() => {
-    prevCatorgeyRef.current = catorgey;    
-  }, [catorgey]);
+    prevCategoryRef.current = category;    
+  }, [category]);
 
 
 
-  function handleCatorgeyChange(selectCatorgey){
+  function handleCategoryChange(selectCategory){
 
-    if (selectCatorgey.target.childNodes.length === 0){
-      setCatorgey(` ${selectCatorgey.target.alt}`)
+    if (selectCategory.target.childNodes.length === 0){
+      setCategory(` ${selectCategory.target.alt}`)
     }
-    else if (selectCatorgey.target.childNodes[4] !== ""){
-      setCatorgey(selectCatorgey.target.childNodes[4].wholeText)
+    else if (selectCategory.target.childNodes[4] !== ""){
+      setCategory(selectCategory.target.childNodes[4].wholeText)
       // selectCatorgey.target.className = "activeCategoryBarBtn"
     }
 
-    if((selectCatorgey.target.alt ||selectCatorgey.target.childNodes[4].wholeText) === prevCatorgeyRef.current){
-      setCatorgey("All")
+    if((selectCategory.target.alt ||selectCategory.target.childNodes[4].wholeText) === prevCategoryRef.current){
+      setCategory("All")
       // selectCatorgey.target.className = "categoryBarBtn"
       }
 
@@ -58,7 +60,7 @@ function App() {
   }, []);
 
 
-
+  // maybe by location too
   const searchedProperties = properties.filter((property) => 
   (property.name.toLowerCase()).includes(searchInput.toLowerCase()))
 
@@ -119,24 +121,24 @@ function App() {
 
 
   function displayItems(){
-    if(catorgey === "All"){
+    if(category === "All"){
       return showProperties
     }
 
-    if(catorgey === " House"){
-      console.log("Houses")
+    if(category === " House"){
+      // console.log("Houses")
       return showHouses
     }
 
-    if(catorgey === " Beach/Tropical"){
+    if(category === " Beach/Tropical"){
       return showBeachTropicals
     }
 
-    if(catorgey === " Cabin"){
+    if(category === " Cabin"){
       return showCabins
     }
 
-    if(catorgey === " Best Pools"){
+    if(category === " Best Pools"){
       return showBestPools
     }
 
@@ -145,7 +147,7 @@ function App() {
   return (
     <div className="App">
 
-      <HeaderBar propertySearch={propertySearch} handleCatorgeyChange={handleCatorgeyChange} />
+      <HeaderBar propertySearch={propertySearch} handleCategoryChange={handleCategoryChange} />
 
       <PropertyListingContainer displayItems={displayItems}/>
 

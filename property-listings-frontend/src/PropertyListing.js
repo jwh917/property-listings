@@ -35,6 +35,7 @@ function PropertyListing({property}) {
 
           <h6>{bedrooms} Bedrooms</h6>
           <h6>{bathrooms} Bathrooms</h6>
+          {/* make bigger and add hover color */}
           🗑 | ✍🏼
 
         </div>

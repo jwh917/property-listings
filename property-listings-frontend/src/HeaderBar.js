@@ -7,7 +7,7 @@ import MenuIcon from './MenuIcon';
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
 
-function HeaderBar({propertySearch, handleCatorgeyChange}) {
+function HeaderBar({propertySearch, handleCategoryChange}) {
 
   const [showForm, setShowForm] = useState(false);
 
@@ -29,7 +29,7 @@ function HeaderBar({propertySearch, handleCatorgeyChange}) {
 
       </div>
 
-      {showForm ? <PropertyListingForm /> : <CategoryBar handleCatorgeyChange={handleCatorgeyChange} />
+      {showForm ? <PropertyListingForm /> : <CategoryBar handleCategoryChange={handleCategoryChange} />
             
     }
 
