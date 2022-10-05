@@ -223,4 +223,10 @@ hr{
   color: blue;
 }
 
+.propertyDetails:hover{
+  cursor: pointer;
+  background: #e04b52;
+
+}
+
 

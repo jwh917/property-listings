@@ -94,10 +94,7 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
 
     event.target.reset()
     setFormCategory(options[0].value)
-
   }
-
-
 
 
   return (

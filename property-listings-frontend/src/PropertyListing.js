@@ -1,8 +1,8 @@
 import React from "react";
 
-function PropertyListing({property}) {
+function PropertyListing({property, handleDelProperty}) {
 
-  const {itemUrl, name, location, price, category, bedrooms, bathrooms} = property
+  const {id, itemUrl, name, location, price, category, bedrooms, bathrooms} = property
 
   function propertyIcon(category){
     if (category === "House"){
@@ -17,6 +17,16 @@ function PropertyListing({property}) {
     if (category === "Best Pools"){
       return <img className="categoryBarImg" src="https://a0.muscache.com/pictures/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt="Best Pools" />
     }
+
+  }
+
+  function handleDeleteClick() {
+    
+    fetch(`http://localhost:3000/properties/${id}`, {
+      method: "DELETE",
+    })
+      .then((r) => r.json())
+      .then(() => handleDelProperty(property));
 
   }
 
@@ -36,7 +46,11 @@ function PropertyListing({property}) {
           <h6>{bedrooms} Bedrooms</h6>
           <h6>{bathrooms} Bathrooms</h6>
           {/* make bigger and add hover color */}
-          🗑 | ✍🏼
+
+          <span className="propertyDetails" >✍🏼</span> &nbsp; 
+          | 
+          &nbsp; <span className="propertyDetails" onClick={handleDeleteClick}>🗑</span>
+      
 
         </div>
       </div>

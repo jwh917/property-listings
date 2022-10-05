@@ -88,11 +88,20 @@ function App() {
   const bestPools = searchedProperties.filter(property => property.category === "Best Pools");
 
 
+
+
+  function handleDelProperty(deletedProperty){
+    const updatedProperties = properties.filter((property) => property.id !== deletedProperty.id);
+    setProperties(updatedProperties)
+  }
+
+
   const showProperties = searchedProperties.map((property) => {
     return(
       <PropertyListing
       key={property.name}
       property={property}
+      handleDelProperty={handleDelProperty}
       />
     )
   })
@@ -102,6 +111,7 @@ function App() {
       <PropertyListing
       key={property.name}
       property={property}
+      handleDelProperty={handleDelProperty}
       />
     )
   })
@@ -111,6 +121,7 @@ function App() {
       <PropertyListing
       key={property.name}
       property={property}
+      handleDelProperty={handleDelProperty}
       />
     )
   })
@@ -120,6 +131,7 @@ function App() {
       <PropertyListing
       key={property.name}
       property={property}
+      handleDelProperty={handleDelProperty}
       />
     )
   })
@@ -129,6 +141,7 @@ function App() {
       <PropertyListing
       key={property.name}
       property={property}
+      handleDelProperty={handleDelProperty}
       />
     )
   })
@@ -156,6 +169,8 @@ function App() {
     }
 
   }
+
+  
 
 
 
