@@ -2,18 +2,16 @@ import React from "react";
 
 function FilterButton({sortHighLow, sortLowHigh, sortHandleHighLow, sortHandleLowHigh}) {
 
-
   return (
 
     <div className="priceBtns">
 
       {sortHighLow ? 
-      (<button onClick={sortHandleHighLow} id="activeButton" className="filterButton">Price ⬆️</button>) 
+      (<button onClick={sortHandleHighLow} id="activeButton" className="filterButton">⬆️ Price</button>) 
       : 
-      (<button onClick={sortHandleHighLow} className="filterButton">Price ⬆️</button>)
+      (<button onClick={sortHandleHighLow} className="filterButton"> ⬆️ Price</button>)
       }
 
-      <br></br>
       <br></br>
 
       {sortLowHigh ?

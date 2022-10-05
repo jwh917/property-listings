@@ -49,16 +49,12 @@ function App() {
       setCategory(` ${selectCategory.target.alt}`)
     }
     else if (selectCategory.target.childNodes[4] !== ""){
-      setCategory(selectCategory.target.childNodes[4].wholeText)
-      // selectCatorgey.target.className = "activeCategoryBarBtn"
+      setCategory(selectCategory.target.childNodes[4].wholeText)    
     }
 
     if((selectCategory.target.alt ||selectCategory.target.childNodes[4].wholeText) === prevCategoryRef.current){
       setCategory("All")
-      // selectCatorgey.target.className = "categoryBarBtn"
-      }
-
-      // try to make them active with out state for each button
+    }
 
   }
 
@@ -166,12 +162,14 @@ function App() {
   return (
     <div className="App">
 
-      <HeaderBar propertySearch={propertySearch} handleCategoryChange={handleCategoryChange} />
+      <HeaderBar propertySearch={propertySearch} handleCategoryChange={handleCategoryChange} properties={properties} setProperties={setProperties}/>
 
       <PropertyListingContainer displayItems={displayItems}/>
 
       <FilterButton sortHighLow={sortHighLow} sortLowHigh={sortLowHigh} sortHandleHighLow={sortHandleHighLow} sortHandleLowHigh={sortHandleLowHigh}/>
 
+      <br></br>
+      <br></br>
       <br></br>
       <br></br>
       <br></br>

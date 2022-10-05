@@ -1,18 +1,18 @@
 import React from "react";
-import FormCategoryBar from './FormCategoryBar';
 
-
-function PropertyListingForm() {
+function PropertyListingForm({options, formCategory, propertyNameInput, locationInput, imgUrlInput, priceInput, formCategoryInput, bedroomsInput, bathroomsInput, formSumbitHandle}) {
 
   return (
+
     <div className="newPropertyFormContainer">
-      <form className="newPropertyForm" >
+      <form className="newPropertyForm" onSubmit={formSumbitHandle}>
         <h2>Create New Property!</h2>
         <input
           type="text"
           name="name"
           placeholder="Property Name..."
           className="input-text"
+          onChange={propertyNameInput}
         />
 
         <br></br>
@@ -22,6 +22,7 @@ function PropertyListingForm() {
           name="location"
           placeholder="Location..."
           className="input-text"
+          onChange={locationInput}
         />
 
         <br></br>
@@ -31,41 +32,54 @@ function PropertyListingForm() {
           name="images"
           placeholder="Image Url..."
           className="input-text"
+          onChange={imgUrlInput}
         />
 
         <br></br>
 
         <input
         // number *make input smaller
-          type="text"
+          type="number"
           name="price"
           placeholder="Price $..."
           className="input-num"
+          onChange={priceInput}
         />
+        
 
+        {/* <h3><label for="categories">Choose Category: </label></h3> */}
         <br></br>
         <br></br>
-        <h3> Categories </h3>
-        <FormCategoryBar />
+
+        <select className="input-text" value={formCategory} onChange={formCategoryInput}>
+          {options.map(option => (
+            <option key={option.value} value={option.value}>
+              {option.text}
+            </option>
+          ))}
+        </select>
+
         <br></br>
         <br></br>
 
 
         <input
         // number *make input smaller
-          type="text"
+          type="number"
           name="price"
           placeholder="# of Bedrooms..."
           className="input-num"
+          onChange={bedroomsInput}
         />
         <br></br>
 
         <input
         // number *make input smaller
-          type="text"
+          type="number"
           name="price"
           placeholder="# of Bathrooms..."
           className="input-num"
+          onChange={bathroomsInput}
         />
         <br></br>
         <br></br>
