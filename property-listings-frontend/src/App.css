@@ -224,9 +224,9 @@ hr{
 }
 
 .propertyDetails:hover{
-  cursor: pointer;
+  height: 50px;
+  cursor: default;
   background: #e04b52;
-
 }
 
 

@@ -1,8 +1,44 @@
-import React from "react";
+import React, {useState} from "react";
 
 function PropertyListing({property, handleDelProperty}) {
 
   const {id, itemUrl, name, location, price, category, bedrooms, bathrooms} = property
+
+  const [bedroomNum, setBedroomNum] = useState(bedrooms)
+  const [bathroomNum, setBathroomNum] = useState(bathrooms)
+
+  function handleBedroomChange(event){
+    setBedroomNum(event.target.value)
+
+  }
+
+  function handleBathroomChange(event){
+    setBathroomNum(event.target.value)
+
+  }
+
+  function handleRoomsChange(){
+
+    const newRoomNum = {
+      "bedrooms": parseInt(bedroomNum),
+      "bathrooms": parseInt(bathroomNum)
+    }
+
+    fetch(`http://localhost:3000/properties/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        bedrooms: newRoomNum.bedrooms,
+        bathrooms: newRoomNum.bathrooms}),
+    })
+      .then((r) => r.json())
+      .then((newRoomData) => console.log(newRoomData))
+      
+  }
+
+
 
   function propertyIcon(category){
     if (category === "House"){
@@ -34,24 +70,38 @@ function PropertyListing({property, handleDelProperty}) {
     <div className="categoryBar">
       <div className="categoryBarGrid">
 
-        <div> 
-          <img style={{"width" : "250px", "height" : "250px", "border": "3px solid black", "borderRadius" : "10px"}} src={itemUrl} alt={category} />
+        <div style={{"border": "3px solid black", "borderRadius" : "10px"}}> 
+          <img style={{"width" : "250px", "height" : "250px"}} src={itemUrl} alt={category} />
 
-          <h3>{name}</h3>
+          <h2>{name}</h2>
           <h5>{location}</h5>
           <h4>${price.toLocaleString('en-US')}</h4>
 
           {propertyIcon(category)}
 
-          <h6>{bedrooms} Bedrooms</h6>
-          <h6>{bathrooms} Bathrooms</h6>
-          {/* make bigger and add hover color */}
+          <br></br>
 
-          <span className="propertyDetails" >✍🏼</span> &nbsp; 
-          | 
-          &nbsp; <span className="propertyDetails" onClick={handleDeleteClick}>🗑</span>
+          <h4>{bedroomNum} Bedrooms</h4>
+          <div>
+            <input className="input-num" type="number" min="1" max="20" value={bedroomNum} onChange={handleBedroomChange}></input>
+            &nbsp; <span className="propertyDetails" onClick={handleRoomsChange}>✍🏼</span>
+          </div>
+
+
+
+          <h4>{bathroomNum} Bathrooms</h4>
+          <div>
+            <input className="input-num" type="number" min="1" max="20" value={bathroomNum} onChange={handleBathroomChange}></input>
+            &nbsp; <span className="propertyDetails" onClick={handleRoomsChange}>✍🏼</span>
+          </div>
+
+          <br></br>
+
+          <span className="propertyDetails" onClick={handleDeleteClick}>🗑</span>
+
+          <br></br>
+          <br></br>
       
-
         </div>
       </div>
     </div>
