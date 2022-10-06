@@ -4,7 +4,7 @@ function MenuIcon() {
 
   return (
     <div>
-      <div style={{"border": "1px solid black"}}>  
+      <div className="menu-border">  
         <button id="hamburger-menu">
           <nav id="sidebar-menu"></nav>
         </button>

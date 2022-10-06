@@ -2,6 +2,7 @@ import React from "react";
 
 function HouseIcon() {
 
+  // 3D Home
   // Add Contact Info
 
   return (

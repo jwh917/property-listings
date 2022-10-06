@@ -2,6 +2,7 @@ body {
   font-family: Algerian;
 }
 
+/* HeadBar */
 .headerBar{
   top: 10px;
   margin: auto;
@@ -15,6 +16,7 @@ body {
   padding: 10px;
 }
 
+/* InputSearch */
 .input-search{
   height: 30px;
   width: 18px;
@@ -27,7 +29,6 @@ body {
   color:black;
   font-family: Algerian;
   margin-right: -15px;
-
 }
 
 .input-search:hover {
@@ -42,7 +43,7 @@ body {
   transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
 }
 
-
+/* Buttons */
 button {
   position: relative;
   background-color: white;
@@ -60,7 +61,6 @@ button {
   text-align: center;
   padding: 1rem;
   margin-right: -10px;
-
 }
 
 button:hover {
@@ -69,13 +69,16 @@ button:hover {
   color: #e04b52;
 }
 
-
+/* HeadBar Line */
 hr{
   position: relative;
   border-top: 1px solid black;
 }
 
-
+/* Menu */
+.menu-border{
+  border: 1px solid black;
+}
 
 #hamburger-menu {
   width: 40px;
@@ -105,7 +108,7 @@ hr{
   box-sizing: border-box;
 }
 
-
+/* newPropertyForm */
 .newPropertyFormContainer {
   padding: 1rem;
   width: stretch;
@@ -157,7 +160,7 @@ hr{
   color: #e04b52;
 }
 
-
+/* categoryBar */
 .categoryBar{
   position: relative; 
   top: 10px;
@@ -165,7 +168,6 @@ hr{
   width: 100%;
   left: 30px;
   margin-left: -20px;
-
 }
 
 .categoryBarGrid{
@@ -175,20 +177,17 @@ hr{
   padding: 10px;
 }
 
-
-
 .activeCategoryBarBtn {
   background-color: #699;
   color: white;
 }
-
 
 .categoryBarImg{
   width: 20px;
   height: 20px;
 }
 
-
+/* PriceSortBtns */
 .priceBtns{
   position: fixed;
   border-radius: 70px;
@@ -197,6 +196,11 @@ hr{
   bottom: 10px;
 }
 
+#activeButton{
+  color: blue;
+}
+
+/* filterButton */
 .filterButton {
   display: flex;
   width: 50px;
@@ -204,6 +208,32 @@ hr{
   position: inline-block;
 }
 
+/* propertyListing */
+.propertyListing{
+  position: relative; 
+  top: 10px;
+  margin: auto;
+  width: 100%;
+  left: 30px;
+  margin-left: -20px;
+}
+
+.propertyListingInfo{
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  padding: 10px;
+}
+
+.propertyListingBorder{
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.propertyListingImg{
+  width: 250px; 
+  height: 250px;
+}
 
 .propertyListingContainer{
   top: 10px;
@@ -217,10 +247,6 @@ hr{
   justify-content: space-between;
   text-align: center;
   padding: 10px;
-}
-
-#activeButton{
-  color: blue;
 }
 
 .propertyDetails:hover{

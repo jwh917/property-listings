@@ -38,7 +38,6 @@ function PropertyListingForm({options, formCategory, propertyNameInput, location
         <br></br>
 
         <input
-        // number *make input smaller
           type="number"
           name="price"
           placeholder="Price $..."
@@ -47,7 +46,6 @@ function PropertyListingForm({options, formCategory, propertyNameInput, location
         />
         
 
-        {/* <h3><label for="categories">Choose Category: </label></h3> */}
         <br></br>
         <br></br>
 
@@ -64,7 +62,6 @@ function PropertyListingForm({options, formCategory, propertyNameInput, location
 
 
         <input
-        // number *make input smaller
           type="number"
           name="price"
           placeholder="# of Bedrooms..."
@@ -74,7 +71,6 @@ function PropertyListingForm({options, formCategory, propertyNameInput, location
         <br></br>
 
         <input
-        // number *make input smaller
           type="number"
           name="price"
           placeholder="# of Bathrooms..."

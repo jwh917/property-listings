@@ -2,7 +2,7 @@
   "properties": [
     {
       "id": 1,
-      "itemUrl": "https://a0.muscache.com/im/pictures/1665b898-8cff-4bdf-aba1-c94210351352.jpg?im_w=960",
+      "propertyUrl": "https://a0.muscache.com/im/pictures/1665b898-8cff-4bdf-aba1-c94210351352.jpg?im_w=960",
       "name": "Morris Cabin",
       "location": "Albany, NY",
       "price": 478094,
@@ -12,7 +12,7 @@
     },
     {
       "id": 2,
-      "itemUrl": "https://a0.muscache.com/im/pictures/4de4712a-f9a8-4883-ba40-718155ed37eb.jpg?im_w=960",
+      "propertyUrl": "https://a0.muscache.com/im/pictures/4de4712a-f9a8-4883-ba40-718155ed37eb.jpg?im_w=960",
       "name": "Luci's Villa",
       "location": "Port Jeff, CA",
       "price": 1030256,
@@ -22,7 +22,7 @@
     },
     {
       "id": 3,
-      "itemUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-21409981/original/a8fa243d-dac8-4238-93e5-f7aa33072ff8.jpeg?im_w=960",
+      "propertyUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-21409981/original/a8fa243d-dac8-4238-93e5-f7aa33072ff8.jpeg?im_w=960",
       "name": "Wonder In The Woods",
       "location": "Pinchot, WA",
       "price": 530000,
@@ -32,7 +32,7 @@
     },
     {
       "id": 4,
-      "itemUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-49629092/original/affba2c4-fcf0-4c42-a01e-012a936ccb1d.jpeg?im_w=960",
+      "propertyUrl": "https://a0.muscache.com/im/pictures/miso/Hosting-49629092/original/affba2c4-fcf0-4c42-a01e-012a936ccb1d.jpeg?im_w=960",
       "name": "Rocko's Point",
       "location": "Miami, FL",
       "price": 740639,

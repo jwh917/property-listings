@@ -1,6 +1,6 @@
 import React from "react";
 
-function TitleSearchAddBtn({showForm, handleClick, propertySearch}) {
+function TitleSearchAddBtn({showForm, showFormHandle, propertySearch}) {
 
   return (
     <div>
@@ -11,7 +11,7 @@ function TitleSearchAddBtn({showForm, handleClick, propertySearch}) {
 
       <div className="buttonContainer">
             
-        {showForm ? <button onClick={handleClick}>Close <br></br> ❌ </button> : <button onClick={handleClick}>Add New Property <br></br> 🏡 </button>}
+        {showForm ? <button onClick={showFormHandle}>Close <br></br> ❌ </button> : <button onClick={showFormHandle}>Add New Property <br></br> 🏡 </button>}
 
       </div>
     </div>

@@ -74,7 +74,6 @@ function App() {
   }, []);
 
 
-  // maybe by location too
   const searchedProperties = properties.filter((property) => 
   (property.name.toLowerCase()).includes(searchInput.toLowerCase())).sort((property1, property2) => helpSort(sortLowHigh, sortHighLow, property1, property2))
 
@@ -86,7 +85,6 @@ function App() {
   const cabins = searchedProperties.filter(property => property.category === "Cabin");
 
   const bestPools = searchedProperties.filter(property => property.category === "Best Pools");
-
 
 
 
@@ -173,15 +171,24 @@ function App() {
   
 
 
-
   return (
     <div className="App">
 
-      <HeaderBar propertySearch={propertySearch} handleCategoryChange={handleCategoryChange} properties={properties} setProperties={setProperties}/>
+      <HeaderBar 
+      propertySearch={propertySearch} 
+      handleCategoryChange={handleCategoryChange} 
+      properties={properties} 
+      setProperties={setProperties}/>
 
-      <PropertyListingContainer displayItems={displayItems}/>
+      <PropertyListingContainer 
+      displayItems={displayItems}
+      />
 
-      <FilterButton sortHighLow={sortHighLow} sortLowHigh={sortLowHigh} sortHandleHighLow={sortHandleHighLow} sortHandleLowHigh={sortHandleLowHigh}/>
+      <FilterButton 
+      sortHighLow={sortHighLow} 
+      sortLowHigh={sortLowHigh} 
+      sortHandleHighLow={sortHandleHighLow} 
+      sortHandleLowHigh={sortHandleLowHigh}/>
 
       <br></br>
       <br></br>

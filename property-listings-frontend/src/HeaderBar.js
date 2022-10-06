@@ -31,11 +31,9 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
   const [bathrooms, setBathrooms] = useState(0)
 
 
-  // change to showFormHandle
-  function handleClick() {
+  function showFormHandle() {
     setShowForm((showForm) => !showForm);
   }
-
 
   function propertyNameInput(event){
     setPropertyName(event.target.value)
@@ -71,7 +69,7 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
     const newProperty = {
       name: propertyName,
       location: location,
-      itemUrl: imgUrl,
+      propertyUrl: imgUrl,
       price: parseInt(price),
       category: formCategory,
       bedrooms: parseInt(bedrooms),
@@ -103,7 +101,7 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
 
         <HouseIcon />
 
-        <TitleSearchAddBtn showForm={showForm} handleClick={handleClick} propertySearch={propertySearch}/>
+        <TitleSearchAddBtn showForm={showForm} showFormHandle={showFormHandle} propertySearch={propertySearch}/>
         
         <MenuIcon />
 
