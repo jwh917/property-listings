@@ -88,7 +88,6 @@ function PropertyListingForm({options, formCategory, propertyNameInput, location
           className="submit"
         />
 
-
       </form>
     </div>
   );

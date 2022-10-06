@@ -22,7 +22,9 @@ function PropertyListing({property, handleDelProperty}) {
       "bathrooms": parseInt(bathroomNum)
     }
 
-    fetch(`http://localhost:3000/properties/${id}`, {
+    // fetch(`http://localhost:3000/properties/${id}`, {
+    fetch(`http://localhost:9292/properties/${id}`, {
+      
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +57,9 @@ function PropertyListing({property, handleDelProperty}) {
 
   function handleDeleteClick() {
     
-    fetch(`http://localhost:3000/properties/${id}`, {
+    // fetch(`http://localhost:3000/properties/${id}`, {
+    fetch(`http://localhost:9292/properties/${id}`, {
+      
       method: "DELETE",
     })
       .then((r) => r.json())

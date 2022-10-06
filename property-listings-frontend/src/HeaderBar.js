@@ -80,7 +80,8 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
     // error or window saying which ever one isnt filled
     if(newProperty.propertyName === "" || newProperty.location === "" || newProperty.itemUrl === "" || newProperty.price === 0 || newProperty.category === "" || newProperty.bedrooms === 0 || newProperty.bathrooms === 0 ) return
 
-    fetch("http://localhost:3000/properties", {
+    // fetch("http://localhost:3000/properties", {
+    fetch("http://localhost:9292/properties", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

@@ -65,7 +65,8 @@ function App() {
 
 
   useEffect(() => {
-    fetch("http://localhost:3000/properties")
+    // fetch("http://localhost:3000/properties")
+    fetch("http://localhost:9292/properties")
       .then((r) => r.json())
       .then((propertiesData) => 
       setProperties(propertiesData)
