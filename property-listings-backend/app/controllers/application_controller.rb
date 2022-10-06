@@ -2,10 +2,11 @@ class ApplicationController < Sinatra::Base
   set :default_content_type, 'application/json'
   
   # Add your routes here
-  get "/" do
-    { message: "Good luck with your project!" }.to_json
-  end
+  # get "/" do
+  #   { message: "Good luck with your project!" }.to_json
+  # end
 
+  # Properties
   get '/properties' do
     properties = Property.all
     properties.to_json
@@ -37,6 +38,44 @@ class ApplicationController < Sinatra::Base
     properties = Property.find(params[:id])
     properties.destroy
     properties.to_json
+  end
+
+  get '/properties/by_price_d' do
+    properties = Property.by_price_d
+    properties.to_json
+  end
+
+  get '/properties/by_price_a' do
+    properties = Property.by_price_a
+    properties.to_json
+  end
+
+  get '/properties/most_expensive' do
+    properties = Property.by_price_d.first
+    properties.to_json
+  end
+
+  get '/properties/cheapest' do
+    properties = Property.by_price_a.first
+    properties.to_json
+  end
+
+  # Owner
+  get '/owners' do
+    owners = Owner.all
+    owners.to_json
+  end
+
+  get '/owners/:id' do
+    owners = Owner.find(params[:id])
+    owners.to_json(include: :properties)
+  end
+
+  post '/owners' do
+    owners = Owner.create(
+      name: params[:name]
+    )
+    owners.to_json
   end
 
 end
