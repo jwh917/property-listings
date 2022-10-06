@@ -1,5 +1,52 @@
 puts "🌱 Seeding spices..."
 
 # Seed your database here
+Owner.create(name: "Dale Dimmadome")
+
+
+Property.create(
+  propertyUrl: "https://a0.muscache.com/im/pictures/1665b898-8cff-4bdf-aba1-c94210351352.jpg?im_w=960", 
+  name: "Morris Cabin",
+  location: "Albany, NY",
+  price: 478094,
+  category: "Cabin",
+  bedrooms: 4,
+  bathrooms: 2,
+  owner_id: 1
+)
+
+Property.create(
+  propertyUrl: "https://a0.muscache.com/im/pictures/4de4712a-f9a8-4883-ba40-718155ed37eb.jpg?im_w=960",
+  name: "Luci's Villa",
+  location: "Port Jeff, CA",
+  price: 1030256,
+  category: "Best Pools",
+  bedrooms: 5,
+  bathrooms: 3,
+  owner_id: 1
+)
+
+Property.create(
+  propertyUrl: "https://a0.muscache.com/im/pictures/miso/Hosting-21409981/original/a8fa243d-dac8-4238-93e5-f7aa33072ff8.jpeg?im_w=960",
+  name: "Wonder In The Woods",
+  location: "Pinchot, WA",
+  price: 530000,
+  category: "House",
+  bedrooms: 2,
+  bathrooms: 1,
+  owner_id: 1
+)
+
+Property.create(
+  propertyUrl: "https://a0.muscache.com/im/pictures/miso/Hosting-49629092/original/affba2c4-fcf0-4c42-a01e-012a936ccb1d.jpeg?im_w=960",
+  name: "Rocko's Point",
+  location: "Miami, FL",
+  price: 740639,
+  category: "Beach/Tropical",
+  bedrooms: 3,
+  bathrooms: 1,
+  owner_id: 1
+)
+
 
 puts "✅ Done seeding!"
