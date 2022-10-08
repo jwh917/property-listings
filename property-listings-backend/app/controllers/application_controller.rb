@@ -12,6 +12,11 @@ class ApplicationController < Sinatra::Base
     properties.to_json
   end
 
+  get '/properties/:id' do
+    properties = Property.find(params[:id])
+    properties.to_json
+  end
+
   post '/properties' do
     properties = Property.create(
       name: params[:name],
@@ -75,6 +80,12 @@ class ApplicationController < Sinatra::Base
     owners = Owner.create(
       name: params[:name]
     )
+    owners.to_json
+  end
+
+  delete '/owners/:id' do
+    owners = Owner.find(params[:id])
+    owners.destroy
     owners.to_json
   end
 
