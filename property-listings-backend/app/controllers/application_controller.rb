@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
       category: params[:category],
       bedrooms: params[:bedrooms],
       bathrooms: params[:bathrooms],
+      owner_id: params[:owner_id]
     )
     properties.to_json
   end

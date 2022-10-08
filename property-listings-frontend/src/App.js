@@ -17,6 +17,9 @@ function App() {
   const [sortHighLow, setSortHighLow] = useState(false)
   const [sortLowHigh, setSortLowHigh] = useState(false)
 
+  const [ownerActive, setOwnerActive] = useState(0)
+
+
   function sortHandleHighLow(){
     setSortHighLow((prevState) => !prevState)
     setSortLowHigh(false)
@@ -37,10 +40,12 @@ function App() {
   }
 
   const prevCategoryRef = useRef();
+  const prevOwnerRef = useRef();
 
   useEffect(() => {
     prevCategoryRef.current = category;    
-  }, [category]);
+    prevOwnerRef.current = ownerActive;    
+  }, [category, ownerActive]);
 
 
   function handleCategoryChange(selectCategory){
@@ -79,15 +84,23 @@ function App() {
   (property.name.toLowerCase()).includes(searchInput.toLowerCase())).sort((property1, property2) => helpSort(sortLowHigh, sortHighLow, property1, property2))
 
 
-  const houses = searchedProperties.filter(property => property.category === "House");
+  const finalProperties = searchedProperties.filter((property) => {
+    if (property.owner_id === ownerActive){
+      return property
+    }
+    else if (ownerActive === 0){
+      return properties
+    }
+  })
+  
 
-  const beachTropicals = searchedProperties.filter(property => property.category === "Beach/Tropical");
+  const houses = finalProperties.filter(property => property.category === "House");
 
-  const cabins = searchedProperties.filter(property => property.category === "Cabin");
+  const beachTropicals = finalProperties.filter(property => property.category === "Beach/Tropical");
 
-  const bestPools = searchedProperties.filter(property => property.category === "Best Pools");
+  const cabins = finalProperties.filter(property => property.category === "Cabin");
 
-
+  const bestPools = finalProperties.filter(property => property.category === "Best Pools");
 
   function handleDelProperty(deletedProperty){
     const updatedProperties = properties.filter((property) => property.id !== deletedProperty.id);
@@ -95,7 +108,7 @@ function App() {
   }
 
 
-  const showProperties = searchedProperties.map((property) => {
+  const showProperties = finalProperties.map((property) => {
     return(
       <PropertyListing
       key={property.name}
@@ -169,9 +182,6 @@ function App() {
 
   }
 
-  
-
-
   return (
     <div className="App">
 
@@ -179,7 +189,10 @@ function App() {
       propertySearch={propertySearch} 
       handleCategoryChange={handleCategoryChange} 
       properties={properties} 
-      setProperties={setProperties}/>
+      setProperties={setProperties}
+      ownerActive={ownerActive}
+      setOwnerActive={setOwnerActive}
+      prevOwnerRef={prevOwnerRef}/>
 
       <PropertyListingContainer 
       displayItems={displayItems}

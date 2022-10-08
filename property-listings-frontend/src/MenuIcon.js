@@ -3,14 +3,13 @@ import NewOwnerForm from './NewOwnerForm';
 import OwnerLabel from './OwnerLabel';
 
 
-function MenuIcon() {
+function MenuIcon({setOwnerActive, prevOwnerRef}) {
 
   const [owners, setOwners] = useState([])
 
   const [newOwner, setNewOwner] = useState("")
 
   useEffect(() => {
-    // fetch("http://localhost:3000/properties")
     fetch("http://localhost:9292/owners")
       .then((r) => r.json())
       .then((ownersData) => 
@@ -22,8 +21,6 @@ function MenuIcon() {
   function handleNewOwner(event){
     setNewOwner(event.target.value)
   }
-
-  console.log(newOwner)
 
   function formOwnerSumbit(event){
     event.preventDefault()
@@ -50,8 +47,6 @@ function MenuIcon() {
     event.target.reset()
   }
 
-
-
   function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
   }
@@ -59,6 +54,17 @@ function MenuIcon() {
   function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
   }
+
+  function handleDeleteOwner(deletedOwner){
+    const updatedOwners = owners.filter((owner) => owner.id !== deletedOwner.id);
+    setOwners(updatedOwners)
+  }
+
+  const ownersLabels = owners.map((owner) => {
+    return(
+      <OwnerLabel key={owner.name} owner={owner} handleDeleteOwner={handleDeleteOwner} setOwnerActive={setOwnerActive} prevOwnerRef={prevOwnerRef}/>
+    )
+  })
 
 
 
@@ -75,7 +81,10 @@ function MenuIcon() {
 
         <hr className="hr"></hr>
 
-        <OwnerLabel owners={owners}/>
+        <h2>Owners</h2>
+
+        {ownersLabels}
+
 
       </div>
 

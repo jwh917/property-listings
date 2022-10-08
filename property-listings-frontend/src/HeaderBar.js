@@ -7,7 +7,7 @@ import MenuIcon from './MenuIcon';
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
 
-function HeaderBar({propertySearch, handleCategoryChange, properties, setProperties}) {
+function HeaderBar({propertySearch, handleCategoryChange, properties, setProperties, ownerActive, setOwnerActive, prevOwnerRef}) {
 
   const [showForm, setShowForm] = useState(false);
 
@@ -66,6 +66,8 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
   function formSumbitHandle(event){
     event.preventDefault()
 
+
+
     const newProperty = {
       name: propertyName,
       location: location,
@@ -73,12 +75,14 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
       price: parseInt(price),
       category: formCategory,
       bedrooms: parseInt(bedrooms),
-      bathrooms: parseInt(bathrooms)
+      bathrooms: parseInt(bathrooms),
+      owner_id: ownerActive
     }
 
     // create error message
     // error or window saying which ever one isnt filled
-    if(newProperty.propertyName === "" || newProperty.location === "" || newProperty.itemUrl === "" || newProperty.price === 0 || newProperty.category === "" || newProperty.bedrooms === 0 || newProperty.bathrooms === 0 ) return
+    // pick a ower to add properties
+    if(newProperty.propertyName === "" || newProperty.location === "" || newProperty.itemUrl === "" || newProperty.price === 0 || newProperty.category === "" || newProperty.bedrooms === 0 || newProperty.bathrooms === 0 || newProperty.owner_id === 0 ) return
 
     // fetch("http://localhost:3000/properties", {
     fetch("http://localhost:9292/properties", {
@@ -104,7 +108,7 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
 
         <TitleSearchAddBtn showForm={showForm} showFormHandle={showFormHandle} propertySearch={propertySearch}/>
         
-        <MenuIcon />
+        <MenuIcon setOwnerActive={setOwnerActive} prevOwnerRef={prevOwnerRef}/>
 
       </div>
 
