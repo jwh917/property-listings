@@ -1,4 +1,7 @@
 import React, {useState, useEffect} from "react";
+import NewOwnerForm from './NewOwnerForm';
+import OwnerLabel from './OwnerLabel';
+
 
 function MenuIcon() {
 
@@ -68,52 +71,11 @@ function MenuIcon() {
         <p style={{"cursor": "pointer"}} className="closebtn" onClick={closeNav}>x</p>
         <br></br>
 
-        {/* Menu Form Comp */}
-        <div>
-          <form onSubmit={formOwnerSumbit}>
-            <h2> Create New Owner:</h2>
-
-            <input
-            type="text"
-            name="name"
-            placeholder="Owner Name..."
-            className="input-text"
-            style={{"width": "180px"}}
-            onChange={handleNewOwner}
-            />
-
-            <br></br>
-
-            <input
-            type="submit"
-            name="submit"
-            value="Create New Owner"
-            className="submit"
-            />
-          </form>
-        </div>
+        <NewOwnerForm formOwnerSumbit={formOwnerSumbit} handleNewOwner={handleNewOwner}/>
 
         <hr className="hr"></hr>
 
-        {/* Owner Label Comp */}
-        <div>
-
-          <h2>Owners</h2>
-
-          {owners.map(owner => (
-            <h3 key={owner.id}>
-              {owner.name} &nbsp;
-              <label className="switch">
-                {/* onChange for checkbox */}
-                <input type="checkbox"></input>
-                <span className="slider round"></span>
-              </label>
-              &nbsp;
-              🗑
-            </h3>
-          ))}
-
-        </div>
+        <OwnerLabel owners={owners}/>
 
       </div>
 
