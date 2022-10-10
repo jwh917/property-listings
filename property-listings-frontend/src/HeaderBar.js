@@ -7,7 +7,7 @@ import MenuIcon from './MenuIcon';
 import PropertyListingForm from "./PropertyListingForm";
 import CategoryBar from './CategoryBar';
 
-function HeaderBar({propertySearch, handleCategoryChange, properties, setProperties, ownerActive, setOwnerActive, prevOwnerRef}) {
+function HeaderBar({propertySearch, handleCategoryChange, properties, setProperties, ownerActive, setOwnerActive, prevOwnerRef, owners, setOwners}) {
 
   const [showForm, setShowForm] = useState(false);
 
@@ -108,7 +108,7 @@ function HeaderBar({propertySearch, handleCategoryChange, properties, setPropert
 
         <TitleSearchAddBtn showForm={showForm} showFormHandle={showFormHandle} propertySearch={propertySearch}/>
         
-        <MenuIcon setOwnerActive={setOwnerActive} prevOwnerRef={prevOwnerRef}/>
+        <MenuIcon setOwnerActive={setOwnerActive} prevOwnerRef={prevOwnerRef} owners={owners} setOwners={setOwners}/>
 
       </div>
 

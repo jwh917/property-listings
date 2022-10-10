@@ -17,7 +17,37 @@ function App() {
   const [sortHighLow, setSortHighLow] = useState(false)
   const [sortLowHigh, setSortLowHigh] = useState(false)
 
+  const [owners, setOwners] = useState([])
+
   const [ownerActive, setOwnerActive] = useState(0)
+
+
+  useEffect(() => {
+    // fetch("http://localhost:3000/properties")
+    fetch("http://localhost:9292/properties")
+      .then((r) => r.json())
+      .then((propertiesData) => 
+      setProperties(propertiesData)
+      );
+
+  }, []);
+
+  useEffect(() => {
+    fetch("http://localhost:9292/owners")
+      .then((r) => r.json())
+      .then((ownersData) => 
+      setOwners(ownersData)
+      );
+
+  }, []);
+
+  const prevCategoryRef = useRef();
+  const prevOwnerRef = useRef();
+
+  useEffect(() => {
+    prevCategoryRef.current = category;    
+    prevOwnerRef.current = ownerActive;    
+  }, [category, ownerActive]);
 
 
   function sortHandleHighLow(){
@@ -38,15 +68,6 @@ function App() {
       return property2.price - property1.price
     }
   }
-
-  const prevCategoryRef = useRef();
-  const prevOwnerRef = useRef();
-
-  useEffect(() => {
-    prevCategoryRef.current = category;    
-    prevOwnerRef.current = ownerActive;    
-  }, [category, ownerActive]);
-
 
   function handleCategoryChange(selectCategory){
 
@@ -69,21 +90,11 @@ function App() {
   }
 
 
-  useEffect(() => {
-    // fetch("http://localhost:3000/properties")
-    fetch("http://localhost:9292/properties")
-      .then((r) => r.json())
-      .then((propertiesData) => 
-      setProperties(propertiesData)
-      );
-
-  }, []);
-
-
   const searchedProperties = properties.filter((property) => 
   (property.name.toLowerCase()).includes(searchInput.toLowerCase())).sort((property1, property2) => helpSort(sortLowHigh, sortHighLow, property1, property2))
 
-
+// remove later!!!!!!!!!!********
+// eslint-disable-next-line 
   const finalProperties = searchedProperties.filter((property) => {
     if (property.owner_id === ownerActive){
       return property
@@ -114,6 +125,7 @@ function App() {
       key={property.name}
       property={property}
       handleDelProperty={handleDelProperty}
+      owners={owners}
       />
     )
   })
@@ -124,6 +136,7 @@ function App() {
       key={property.name}
       property={property}
       handleDelProperty={handleDelProperty}
+      owners={owners}
       />
     )
   })
@@ -134,6 +147,7 @@ function App() {
       key={property.name}
       property={property}
       handleDelProperty={handleDelProperty}
+      owners={owners}
       />
     )
   })
@@ -144,6 +158,7 @@ function App() {
       key={property.name}
       property={property}
       handleDelProperty={handleDelProperty}
+      owners={owners}
       />
     )
   })
@@ -154,6 +169,7 @@ function App() {
       key={property.name}
       property={property}
       handleDelProperty={handleDelProperty}
+      owners={owners}
       />
     )
   })
@@ -192,7 +208,9 @@ function App() {
       setProperties={setProperties}
       ownerActive={ownerActive}
       setOwnerActive={setOwnerActive}
-      prevOwnerRef={prevOwnerRef}/>
+      prevOwnerRef={prevOwnerRef}
+      owners={owners}
+      setOwners={setOwners}/>
 
       <PropertyListingContainer 
       displayItems={displayItems}

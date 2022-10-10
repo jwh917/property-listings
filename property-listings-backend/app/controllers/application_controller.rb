@@ -35,7 +35,7 @@ class ApplicationController < Sinatra::Base
     properties = Property.find(params[:id])
     properties.update(
       bedrooms: params[:bedrooms],
-      bedrooms: params[:bedrooms]
+      bathrooms: params[:bathrooms]
     )
     properties.to_json
   end

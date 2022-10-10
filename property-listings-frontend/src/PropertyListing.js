@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 
-function PropertyListing({property, handleDelProperty}) {
+function PropertyListing({property, handleDelProperty, owners}) {
 
-  const {id, propertyUrl, name, location, price, category, bedrooms, bathrooms} = property
+  const {id, propertyUrl, name, location, price, category, bedrooms, bathrooms, owner_id} = property
 
   const [bedroomNum, setBedroomNum] = useState(bedrooms)
   const [bathroomNum, setBathroomNum] = useState(bathrooms)
@@ -66,6 +66,15 @@ function PropertyListing({property, handleDelProperty}) {
       .then(() => handleDelProperty(property));
   }
 
+  function knowOwner(){
+    // remove later!!!!!!!!!!********
+    // eslint-disable-next-line
+    return owners.map((owner) => {
+      if (owner.id === owner_id){
+        return owner.name
+      }
+    })
+  }
 
   return (
     <div className="propertyListing">
@@ -75,6 +84,9 @@ function PropertyListing({property, handleDelProperty}) {
           <img className="propertyListingImg" src={propertyUrl} alt={category} />
 
           <h2>{name}</h2>
+          <h3>Owner: <br></br>
+          {knowOwner()}</h3>
+
           <h5>{location}</h5>
           <h4>${price.toLocaleString('en-US')}</h4>
 

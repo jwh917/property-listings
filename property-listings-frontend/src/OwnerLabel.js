@@ -25,15 +25,14 @@ function OwnerLabel({owner, handleDeleteOwner, setOwnerActive, prevOwnerRef}) {
 
 
   return (
-    <div>
+    <div className="ownerLabel" >
 
-      {/* hover css and cursor pointer  */}
       <h3 onClick={handleOwnerChange} >
+        
         {name} &nbsp;
         <button onClick={deleteOwner}>🗑</button>
       </h3>
       
-
     </div>
   );
 }

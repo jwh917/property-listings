@@ -1,24 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import NewOwnerForm from './NewOwnerForm';
 import OwnerLabel from './OwnerLabel';
 
 
-function MenuIcon({setOwnerActive, prevOwnerRef}) {
+function MenuIcon({setOwnerActive, prevOwnerRef, owners, setOwners}) {
 
-  const [owners, setOwners] = useState([])
 
   const [newOwner, setNewOwner] = useState("")
 
-  useEffect(() => {
-    fetch("http://localhost:9292/owners")
-      .then((r) => r.json())
-      .then((ownersData) => 
-      setOwners(ownersData)
-      );
-
-  }, []);
-
-  function handleNewOwner(event){
+  function handleNewOwner(event){ 
     setNewOwner(event.target.value)
   }
 
@@ -69,22 +59,25 @@ function MenuIcon({setOwnerActive, prevOwnerRef}) {
 
 
   return (
-    // class for border
-    <div style={{"width": "70px", "height":"70px", "border": "1px solid black"}}>
+    <div className="menuBorder" >
       <div id="mySidenav" className="sidenav">
 
-        {/* class for x *close btn */}
-        <p style={{"cursor": "pointer"}} className="closebtn" onClick={closeNav}>x</p>
+        <p className="closebtn" onClick={closeNav}>x</p>
         <br></br>
 
-        <NewOwnerForm formOwnerSumbit={formOwnerSumbit} handleNewOwner={handleNewOwner}/>
+        <div style={{"marginTop": "-30px"}}>
+          <NewOwnerForm formOwnerSumbit={formOwnerSumbit} handleNewOwner={handleNewOwner}/>
+        </div>
 
         <hr className="hr"></hr>
+        <br></br>
 
-        <h2>Owners</h2>
+       
 
-        {ownersLabels}
-
+        <div style={{"marginTop": "-30px"}}>
+          <h2>Owners</h2>
+          {ownersLabels}
+        </div>
 
       </div>
 
