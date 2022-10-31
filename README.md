@@ -33,13 +33,13 @@
 <!-- Property Listings DEMO -->
 ## Property Listings Demo
 <!-- GIF -->
- ![PLScreenRecord0](PLScreenRecord0.gif)
-
+ ![PLScreenRecord0](ScreenRecordingPL(0).gif)
 
 
 ### Built With
 - HTML
 - CSS
+- JavaScript
 - React
 - Ruby
 
@@ -66,9 +66,7 @@
 
       - Open a new terminal and run `cd property-listings-frontend` To change to frontend directory
        
-      - Then run `$ npm start`
-
-      - This will run the app in the development mode.
+      - Then run `$ npm start` This will run the app in the development mode.
 
       - Open http://localhost:3000 To view it in your browser.
 
@@ -78,9 +76,9 @@
   
 -  Property Listings allows owners to showcase their properties in a smooth and simple process. Owners will create an owner label. Once a label is created an owner can add their new property effortlessly with the new property form. Properties show the property, owner, location, price paid for property, category, bed and bath rooms. The inputs allows an easy search of all the properties. Listings can be searched by name or category and even sort them by the price or owner. Bedrooms and bathrooms on properties can be updated if listings had added or combined rooms in the future. 
 
- ![PLScreenRecord1](PLScreenRecord1.gif)
+ ![PLScreenRecord1](ScreenRecordingPL(1).gif)
 <!-- GIF -->
- ![PLScreenRecord2](PLScreenRecord2.gif)
+ ![PLScreenRecord2](ScreenRecordingPL(2).gif)
 <!-- GIF -->
 
 
