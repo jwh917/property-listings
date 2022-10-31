@@ -52,8 +52,9 @@
 
     Installation
 
-     - Clone the repo
-      - `$ git clone https://github.com/jwh917/property-listings`
+      - Clone the repo, run `$ git clone https://github.com/jwh917/property-listings`
+
+      - Run `cd property-listings-backend` To change to backend directory
 
       - Run `$ bundle install` To install the gems.
 
@@ -61,11 +62,15 @@
 
       - Use the seeds.rb file to add data to the database `$bundle exec rake db:seed`
 
-      - Run `$ bundle exec rake server` This will run your server on port (http://localhost:9292) 
+      - Run `$ bundle exec rake server` This will run your server on port (http://localhost:9292)
+
+      - Open a new terminal and run `cd property-listings-frontend` To change to frontend directory
        
       - Then run `$ npm start`
-        - This will run the app in the development mode. 
-          - Open http://localhost:3000 to view it in your browser.
+
+      - This will run the app in the development mode.
+
+      - Open http://localhost:3000 To view it in your browser.
 
 
   <!-- USAGE  -->
@@ -81,7 +86,7 @@
 
    <!-- ACKNOWLEDGMENTS -->
    ## Acknowledgments
-    - [AirBnb](https://www.airbnb.com/)
-      - For the seed data 
+  - [AirBnb](https://www.airbnb.com/)
+    - For the seed data 
 
 # Property Listings 🏘
