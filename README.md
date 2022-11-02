@@ -52,19 +52,21 @@
 
     Installation
 
-      - Clone the repo, run `$ git clone https://github.com/jwh917/property-listings`
+      - Clone the repo, run `$ git clone https://github.com/jwh917/property-listings` .
 
-      - Run `cd property-listings-backend` To change to backend directory
+      - To change to the backend directory, run `$ cd property-listings-backend` .
 
-      - Run `$ bundle install` To install the gems.
+      - Then run `$ bundle install` To install the gems.
 
-      - Set up the database by running `$ bundle exec rake db:migrate`
+      - Set up the database by running `$ bundle exec rake db:migrate` .
 
-      - Use the seeds.rb file to add data to the database `$bundle exec rake db:seed`
+      - Use the seeds.rb file to add data to the database `$ bundle exec rake db:seed` .
 
-      - Run `$ bundle exec rake server` This will run your server on port (http://localhost:9292)
+      - Run `$ bundle exec rake server` This will run your server on port (http://localhost:9292).
 
-      - Open a new terminal and run `cd property-listings-frontend` To change to frontend directory
+      - Open a new terminal and run `$ cd property-listings-frontend` To change to the frontend directory.
+
+      - After directory change run `$ npm i` To install all dependencies from the package.json.
        
       - Then run `$ npm start` This will run the app in the development mode.
 
